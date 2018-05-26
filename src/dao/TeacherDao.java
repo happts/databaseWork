@@ -11,11 +11,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Create by PstereoM on 2018/4/24
+ * 数据库中TEACHER表的操作类，
+ * 增删改查
+ * 
+ * @author 黄涛
+ * 
  **/
 public class TeacherDao {
+
+    /**
+     * 连接数据库,通过c3p0,获得c3p0连接池
+     * 配置信息
+     * @see c3p0-config.xml
+     */
     private QueryRunner queryRunner=new TxQueryRunner();
 
+    /**
+     * 将Teacher实体添加到数据库中
+     * @see entity.Teacher
+     */
     public void add(Teacher teacher){
         try {
             String sql="insert into TEACHER values(?,?,?,?,?,?)";
