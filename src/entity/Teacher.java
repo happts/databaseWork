@@ -2,6 +2,10 @@ package entity;
 
 import java.sql.Date;
 
+/**
+ * TEACHER表对应的实体类
+ * @author 黄涛
+ */
 public class Teacher {
     private String tno;
     private String tname;
@@ -10,6 +14,7 @@ public class Teacher {
     private String tdepart;
     private String ttitle;
 
+    //各个属性的 set,get 操作
     public void setTno(String tno){
         this.tno=tno;
     }

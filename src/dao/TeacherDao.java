@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 数据库中TEACHER表的操作类，
+ * 数据操作层
+ * 数据库中TEACHER表的操作类
  * 增删改查
  * 
  * @author 黄涛
@@ -21,14 +22,14 @@ public class TeacherDao {
 
     /**
      * 连接数据库,通过c3p0,获得c3p0连接池
-     * 配置信息
-     * @see c3p0-config.xml
+     * 配置信息见 : c3p0-config.xml
      */
-    private QueryRunner queryRunner=new TxQueryRunner();
+    private QueryRunner queryRunner = new TxQueryRunner();
 
     /**
      * 将Teacher实体添加到数据库中
-     * @see entity.Teacher
+     * 带参数的sql语句,? 为占位符,按顺序对应数组params的内容
+     * @see Teacher
      */
     public void add(Teacher teacher){
         try {
@@ -40,6 +41,10 @@ public class TeacherDao {
         }
     }
 
+    /**
+     * 删除teacher表的一条数据,通过参数tno(主码)找到
+     * @param tno
+     */
     public void delete(String tno){
         try {
             String sql="delete from TEACHER where tno=?";
@@ -49,6 +54,10 @@ public class TeacherDao {
         }
     }
 
+    /**
+     *通过主码tno找到特定的一条数据,转为TEACHER的实体类,作为返回值
+     * @param tno
+     */
     public Teacher find(String tno){
         try {
             String sql="select * from TEACHER where tno=?";
@@ -58,6 +67,10 @@ public class TeacherDao {
         }
     }
 
+    /**
+     * 与添加数据类似,通过teacher类的tno找到此条数据,各个属性修改为teacher类中的值
+     * @param teacher
+     */
     public void edit(Teacher teacher){
         try{
             String sql="update TEACHER set tname=?,tsex=?,tbirthday=?,tdepart=?,ttitle=? where tno=?";
@@ -68,6 +81,10 @@ public class TeacherDao {
         }
     }
 
+    /**
+     * 查询TEACHER表中的全部数据,返回teacher类数组
+     * @return
+     */
     public List<Teacher> findAll(){
         try{
             String sql="select * from TEACHER";
@@ -77,6 +94,11 @@ public class TeacherDao {
         }
     }
 
+    /**
+     * 按条件查询TEACHER表中的数据,使用StringBuilder,进行SQL语句的拼接
+     * @param teacher
+     * @return
+     */
     public List<Teacher> query(Teacher teacher){
         try{
             StringBuilder sql=new StringBuilder();

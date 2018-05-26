@@ -11,7 +11,11 @@ import java.util.Map;
 
 
 /**
- * Create by PstereoM on 2018/5/1
+ * TEACHER的表单操作
+ * @author 黄涛
+ *
+ * formTeacher类中各属性的值来自网页的表单内容
+ * 用来检查表单填写数据的合法性
  **/
 public class formTeacher {
     private String tno;
@@ -79,6 +83,11 @@ public class formTeacher {
         return this.error;
     }
 
+    /**
+     * TEACHER表添加操作时,
+     * validata用来检查表单合法性
+     * @return
+     */
     public boolean validata(){
         boolean result=true;
 

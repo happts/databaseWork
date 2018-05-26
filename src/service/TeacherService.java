@@ -6,7 +6,13 @@ import entity.Teacher;
 import java.util.List;
 
 /**
- * Create by PstereoM on 2018/4/24
+ * Service业务层
+ * 将数据操作与表示层(前端)分隔开
+ * 只执行业务逻辑,不进行数据操作
+ *
+ * TEACHER对应的业务层
+ * @author 黄涛
+ * @see TeacherDao
  **/
 public class TeacherService {
     private TeacherDao teacherDao=new TeacherDao();
