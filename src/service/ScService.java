@@ -5,6 +5,9 @@ import entity.Sc;
 
 import java.util.List;
 
+/**作者：物联1603 齐鹏
+ * 对ScDao类的封装
+ */
 public class ScService {
     ScDao scDao=new ScDao();
 
