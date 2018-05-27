@@ -8,9 +8,7 @@ import entity.Co;
 
 import java.util.List;
 
-/**
- * Create by PstereoM on 2018/4/27
- **/
+
 public class CoService {
     CoDao coDao=new CoDao();
 

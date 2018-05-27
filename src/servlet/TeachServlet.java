@@ -16,9 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Create by PstereoM on 2018/5/6
- **/
+
 @WebServlet("/TeachServlet")
 public class TeachServlet extends BaseServlet{
     private TeachService teachService=new TeachService();//建立teach表
@@ -42,13 +40,6 @@ public class TeachServlet extends BaseServlet{
 
     public String delete(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
         String id=request.getParameter("id");//获取teach表主码
-//        Delete_Check delete_check=new Delete_Check();
-//        if(!delete_check.validata2("cno",cno)){
-//            request.setAttribute("msg2","课程号:"+cno+"  为成绩表外键，拒绝删除");
-//
-//            return "/msg.jsp";
-//        }
-
         teachService.delete(id);//输入删除的主码
         request.setAttribute("msg","删除TEACH成功");
 

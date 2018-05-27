@@ -1,7 +1,7 @@
 ﻿package entity;
 
 /**
- * Create by PstereoM on 2018/5/6
+ *
    张仲昊
  **/
 public class Teach {

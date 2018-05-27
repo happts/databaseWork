@@ -8,9 +8,7 @@ import domain.Teach;
 
 import java.util.List;
 
-/**
- * Create by PstereoM on 2018/5/6
- **/
+
 public class TeachService {
     //增删改查，通过dao层实现
 

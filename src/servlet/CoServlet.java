@@ -16,9 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Create by PstereoM on 2018/4/27
- **/
+
 @WebServlet("/CoServlet")
 public class CoServlet extends BaseServlet{//CoServlet是继承自javax.http.baseServlet的一个类
     private CoService coService=new CoService();
