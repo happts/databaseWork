@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Create by PstereoM on 2018/4/30
+ * 苗建伟 1030616335
+ * 此类用于验证添加student表数据时，参数是否合法
  **/
 public class formStudent {
     private String sno = null;
@@ -19,7 +20,7 @@ public class formStudent {
     private String sclass = null;
     private String sbirthday = null;
 
-    private HashMap<String, String> error = new HashMap<>();
+    private HashMap<String, String> error = new HashMap<>();//存储错误信息
 
     public void setSno(String sno) {
         this.sno = sno;
@@ -69,6 +70,10 @@ public class formStudent {
         return this.error;
     }
 
+    /**
+     * 验证数据合法性
+     * @return 若合法返回true，否则返回false
+     */
     public boolean validata() {
         boolean result = true;
 
@@ -77,10 +82,11 @@ public class formStudent {
             result = false;
         } else {
             try {
-                MoreTableQuery moreTableQuery=new MoreTableQuery();
-                List<LinkedHashMap<String, Object>> list = moreTableQuery.findField("sno");
+                MoreTableQuery moreTableQuery=new MoreTableQuery();//创建与数据库进行操作的对象（此类在dao层）
+                List<LinkedHashMap<String, Object>> list = moreTableQuery.findField("sno");//返回当前表中所有主码信息
                 for (int i = 0; i < list.size(); i++) {
                     String data = list.get(i).get("sno").toString();
+                    //如果数据库主码sno此值已存在，则不能添加
                     if (this.sno.equals(data)) {
                         error.put("sno", "此学号已存在");
                         result = false;

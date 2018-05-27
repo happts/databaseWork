@@ -3,7 +3,8 @@ package domain;
 import java.util.ArrayList;
 
 /**
- * Create by PstereoM on 2018/5/4
+ *苗建伟 1030616335
+ * 添加大作业一所有sql语句
  **/
 public class domainHome {
     private ArrayList<String> sql1=new ArrayList<>();
@@ -20,6 +21,10 @@ public class domainHome {
         return sql1.get(index);
     }
 
+    /**
+     * 大作业一的所有要求
+     * @return arrylist集合
+     */
     public ArrayList<String> addData(){
         ArrayList<String> sql1=new ArrayList<>();
         this.sql1.add("SELECT SNAME,SSEX,SCLASS FROM STUDENT");//1.	能查询学生姓名、性别和班级信息
