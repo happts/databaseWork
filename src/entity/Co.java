@@ -1,5 +1,7 @@
-package domain;
-
+package entity;
+/**
+ * 贾天豪
+ */
 public class Co {
     private String cno;     //在类当中定义string型变量cno
     private String cname;   //在类当中定义string型变量cname

@@ -1,7 +1,9 @@
 package dao;
-
+/**
+ * 贾天豪
+ */
 import cn.itcast.jdbc.TxQueryRunner;
-import domain.Co;
+import entity.Co;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;

@@ -1,8 +1,10 @@
 package servlet;
-
+/**
+ * 贾天豪
+ */
 import cn.itcast.commons.CommonUtils;
 import cn.itcast.servlet.BaseServlet;
-import domain.Co;
+import entity.Co;
 import domain.Delete_Check;
 import domain.formCo;
 import service.CoService;

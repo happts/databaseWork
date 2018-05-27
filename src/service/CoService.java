@@ -1,8 +1,10 @@
 package service;
-
+/**
+ * 贾天豪
+ */
 
 import dao.CoDao;
-import domain.Co;
+import entity.Co;
 
 import java.util.List;
 
