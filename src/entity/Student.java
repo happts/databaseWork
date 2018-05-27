@@ -2,6 +2,11 @@ package entity;
 
 import java.sql.Date;
 
+/**
+ * TEACHER表对应的实体类
+ * @author 王浩然
+ */
+
 public class Student {
     private String sno=null;
     private String sname=null;
@@ -11,11 +16,11 @@ public class Student {
 
     public void setSno(String sno) {
         this.sno = sno;
-    }
+    }//对属性进行set操作，以下类似
 
     public String getSno() {
         return sno;
-    }
+    }//对属性进行get操作，以下类似
 
     public void setSname(String sname){
         this.sname=sname;

@@ -5,6 +5,13 @@ import entity.Student;
 
 import java.util.List;
 
+/**
+ * Service业务层
+ * 将数据操作与表示层分隔
+ * 只执行业务逻辑
+ * Student对应的业务层
+ * @author 王浩然
+ */
 public class StudentService {
     StudentDao studentDao=new StudentDao();
 
