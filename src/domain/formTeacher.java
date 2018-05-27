@@ -27,61 +27,6 @@ public class formTeacher {
 
     private HashMap<String,String> error=new HashMap<>();
 
-    public void setTno(String tno){
-        this.tno=tno;
-    }
-
-    public String getTno(){
-        return tno;
-    }
-
-    public void setTname(String tname) {
-        this.tname = tname;
-    }
-
-    public String getTname() {
-        return tname;
-    }
-
-    public void setTbirthday(String tbirthday) {
-        this.tbirthday = tbirthday;
-    }
-
-    public String getTbirthday() {
-        return tbirthday;
-    }
-
-    public void setTdepart(String tdepart) {
-        this.tdepart = tdepart;
-    }
-
-    public String getTdepart() {
-        return tdepart;
-    }
-
-    public void setTsex(String tsex) {
-        this.tsex = tsex;
-    }
-
-    public String getTsex() {
-        return tsex;
-    }
-
-    public void setTtitle(String ttitle) {
-        this.ttitle = ttitle;
-    }
-
-    public String getTtitle() {
-        return ttitle;
-    }
-
-    public void setError(HashMap<String, String> error) {
-        this.error = error;
-    }
-
-    public HashMap<String,String> getError(){
-        return this.error;
-    }
 
     /**
      * TEACHER表添加操作时,
@@ -90,7 +35,7 @@ public class formTeacher {
      */
     public boolean validata(){
         boolean result=true;
-
+        //检查tno属性是否为空，除掉字符串开头结尾的空字符后是否为空
         if (this.tno==null||this.tno.trim().isEmpty()){
             error.put("tno","编号不能为空");
             result=false;
@@ -147,4 +92,61 @@ public class formTeacher {
 
         return result;
     }
+
+    public void setTno(String tno){
+        this.tno=tno;
+    }
+
+    public String getTno(){
+        return tno;
+    }
+
+    public void setTname(String tname) {
+        this.tname = tname;
+    }
+
+    public String getTname() {
+        return tname;
+    }
+
+    public void setTbirthday(String tbirthday) {
+        this.tbirthday = tbirthday;
+    }
+
+    public String getTbirthday() {
+        return tbirthday;
+    }
+
+    public void setTdepart(String tdepart) {
+        this.tdepart = tdepart;
+    }
+
+    public String getTdepart() {
+        return tdepart;
+    }
+
+    public void setTsex(String tsex) {
+        this.tsex = tsex;
+    }
+
+    public String getTsex() {
+        return tsex;
+    }
+
+    public void setTtitle(String ttitle) {
+        this.ttitle = ttitle;
+    }
+
+    public String getTtitle() {
+        return ttitle;
+    }
+
+    public void setError(HashMap<String, String> error) {
+        this.error = error;
+    }
+
+    public HashMap<String,String> getError(){
+        return this.error;
+    }
+
 }

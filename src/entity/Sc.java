@@ -1,5 +1,9 @@
 package entity;
 
+/** 作者：物联1603 齐鹏
+* 对score表中各属性值
+ * * 进行添加和读取的抽象类
+*/
 public class Sc {
     private String sno;
     private String cno;
